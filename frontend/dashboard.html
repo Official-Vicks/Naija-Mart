@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="p-6">
+    <h1 class="text-xl mb-4">Create Product</h1>
+
+    <input id="name" placeholder="Name" class="border p-2 mb-2 block" />
+    <input
+      id="description"
+      placeholder="Description e.g New, Fairly used"
+      class="border p-3 mb-2 block"
+      type="textarea"
+    />
+    <input id="price" placeholder="Price" class="border p-2 mb-2 block" />
+    <input id="stock" placeholder="Stock" class="border p-2 mb-2 block" />
+
+    <button onclick="createProduct()" class="bg-green-500 text-white p-2">
+      Create
+    </button>
+  </body>
+</html>
