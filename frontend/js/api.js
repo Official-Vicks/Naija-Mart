@@ -90,6 +90,7 @@ const API = {
       body: JSON.stringify(payload),
     }),
   listProducts: () => apiFetch("/products"),
+  listProductsForSeller: () => apiFetch("/products/seller"),
   createProduct: (payload) =>
     apiFetch("/products", { method: "POST", body: JSON.stringify(payload) }),
   getToken,
