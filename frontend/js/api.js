@@ -1,5 +1,5 @@
 // API client
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://naijamart-api-5ti7.onrender.com";
 
 function getToken() {
   return localStorage.getItem("nm_token");
