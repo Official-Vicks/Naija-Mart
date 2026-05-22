@@ -6,12 +6,20 @@ const UI = {
   },
   toast(message, type = "info", timeout = 3200) {
     let host = document.querySelector(".toast");
-    if (!host) { host = document.createElement("div"); host.className = "toast"; document.body.appendChild(host); }
+    if (!host) {
+      host = document.createElement("div");
+      host.className = "toast";
+      document.body.appendChild(host);
+    }
     const el = document.createElement("div");
     el.className = `item ${type}`;
     el.textContent = message;
     host.appendChild(el);
-    setTimeout(() => { el.style.opacity = "0"; el.style.transform = "translateY(8px)"; el.style.transition = "all .25s"; }, timeout - 250);
+    setTimeout(() => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(8px)";
+      el.style.transition = "all .25s";
+    }, timeout - 250);
     setTimeout(() => el.remove(), timeout);
   },
   confirm(message) {
@@ -28,8 +36,14 @@ const UI = {
           </div>
         </div>`;
       back.addEventListener("click", (e) => {
-        if (e.target === back || e.target.dataset.act === "no") { back.remove(); resolve(false); }
-        if (e.target.dataset.act === "yes") { back.remove(); resolve(true); }
+        if (e.target === back || e.target.dataset.act === "no") {
+          back.remove();
+          resolve(false);
+        }
+        if (e.target.dataset.act === "yes") {
+          back.remove();
+          resolve(true);
+        }
       });
       document.body.appendChild(back);
     });
@@ -38,7 +52,9 @@ const UI = {
     const back = document.createElement("div");
     back.className = "modal-back";
     back.innerHTML = `<div class="modal">${html}</div>`;
-    back.addEventListener("click", (e) => { if (e.target === back) back.remove(); });
+    back.addEventListener("click", (e) => {
+      if (e.target === back) back.remove();
+    });
     document.body.appendChild(back);
     return back;
   },
@@ -56,8 +72,12 @@ const UI = {
           <span class="font-display text-lg font-bold">Naijamart</span>
         </a>
         <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-          <a href="index.html" class="${active==='home'?'text-emerald-700':''} hover:text-emerald-700">Home</a>
-          <a href="product.html" class="${active==='shop'?'text-emerald-700':''} hover:text-emerald-700">Shop</a>
+          <a href="index.html" class="${
+            active === "home" ? "text-emerald-700" : ""
+          } hover:text-emerald-700">Home</a>
+          <a href="product.html" class="${
+            active === "shop" ? "text-emerald-700" : ""
+          } hover:text-emerald-700">Shop</a>
           <a href="index.html#sellers" class="hover:text-emerald-700">For Sellers</a>
           <a href="index.html#testimonials" class="hover:text-emerald-700">Testimonials</a>
         </nav>
@@ -82,7 +102,8 @@ const UI = {
     slot.innerHTML = UI.navbar(active);
     const tog = document.getElementById("navToggle");
     const mob = document.getElementById("navMobile");
-    if (tog && mob) tog.addEventListener("click", () => mob.classList.toggle("hidden"));
+    if (tog && mob)
+      tog.addEventListener("click", () => mob.classList.toggle("hidden"));
   },
   footer() {
     return `
@@ -104,28 +125,30 @@ const UI = {
           </ul>
         </div>
         <div>
-          <h4 class="font-semibold mb-3 text-sm">Company</h4>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li><a href="#" class="hover:text-emerald-700">About</a></li>
-            <li><a href="#" class="hover:text-emerald-700">Careers</a></li>
-            <li><a href="#" class="hover:text-emerald-700">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-3 text-sm">Legal</h4>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li><a href="#" class="hover:text-emerald-700">Privacy</a></li>
-            <li><a href="#" class="hover:text-emerald-700">Terms</a></li>
-          </ul>
-        </div>
+        <h4 class="font-semibold mb-3 text-sm">Company</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li><a href="about.html" class="hover:text-emerald-700">About</a></li>
+          <li><a href="careers.html" class="hover:text-emerald-700">Careers</a></li>
+          <li><a href="contact.html" class="hover:text-emerald-700">Contact</a></li>
+        </ul>
       </div>
-      <div class="border-t border-slate-100 py-5 text-center text-xs text-slate-500">© ${new Date().getFullYear()} Naijamart. Built for Nigerian commerce.</div>
-    </footer>`;
+      <div>
+        <h4 class="font-semibold mb-3 text-sm">Legal</h4>
+        <ul class="space-y-2 text-sm text-slate-600">
+          <li><a href="privacy.html" class="hover:text-emerald-700">Privacy</a></li>
+          <li><a href="terms.html" class="hover:text-emerald-700">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-100 py-5 text-center text-xs text-slate-500">© ${new Date().getFullYear()} Naijamart. Built for Nigerian commerce.</div>
+  </footer>`;
   },
   whatsappUrl(phone, productName) {
     const clean = String(phone || "2348000000000").replace(/[^0-9]/g, "");
-    const msg = encodeURIComponent(`Hi! I'm interested in "${productName}" on Naijamart. Is it still available?`);
+    const msg = encodeURIComponent(
+      `Hi! I'm interested in "${productName}" on Naijamart. Is it still available?`
+    );
     return `https://wa.me/${clean}?text=${msg}`;
-  }
+  },
 };
 window.UI = UI;

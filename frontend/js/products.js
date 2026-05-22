@@ -139,7 +139,7 @@ const Products = {
 
   normalize(p) {
     return {
-      id: p.id || p._id || crypto.randomUUID(),
+      id: String(p.id || p._id || crypto.randomUUID()),
       name: p.name || "Untitled",
       price: Number(p.price ?? 0),
       stock: Number(p.stock ?? 0),

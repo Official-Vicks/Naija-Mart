@@ -1,53 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Become a seller — Naijamart</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body class="min-h-screen hero-grad">
-<div id="navbar"></div>
-<main class="max-w-xl mx-auto px-4 py-12">
-  <div class="card p-7 sm:p-8">
-    <h1 class="font-display text-2xl font-bold">Create your seller account</h1>
-    <p class="text-slate-500 mt-1 text-sm">Open your store in under 2 minutes. No card required.</p>
-    <form id="regForm" class="mt-6 grid sm:grid-cols-2 gap-4">
-      <div class="sm:col-span-1">
-        <label class="text-sm font-medium">Full name</label>
-        <input name="name" class="input mt-1" placeholder="Adaeze Okafor" required>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Become a seller — Naijamart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/icons/logo_icon.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="min-h-screen hero-grad">
+    <div id="navbar"></div>
+    <main class="max-w-xl mx-auto px-4 py-12">
+      <div class="card p-7 sm:p-8">
+        <h1 class="font-display text-2xl font-bold">
+          Create your seller account
+        </h1>
+        <p class="text-slate-500 mt-1 text-sm">
+          Open your store in under 2 minutes. No card required.
+        </p>
+        <form id="regForm" class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-1">
+            <label class="text-sm font-medium">Full name</label>
+            <input
+              name="name"
+              class="input mt-1"
+              placeholder="Adaeze Okafor"
+              required
+            />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="text-sm font-medium">Store name</label>
+            <input
+              name="store"
+              class="input mt-1"
+              placeholder="Adaeze Beauty"
+              required
+            />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="text-sm font-medium">Phone (WhatsApp)</label>
+            <input
+              name="phone"
+              class="input mt-1"
+              placeholder="08012345678"
+              required
+            />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="text-sm font-medium">Email</label>
+            <input
+              name="email"
+              type="email"
+              class="input mt-1"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="text-sm font-medium">Password</label>
+            <input
+              name="password"
+              type="password"
+              class="input mt-1"
+              required
+            />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="text-sm font-medium">Confirm password</label>
+            <input name="confirm" type="password" class="input mt-1" required />
+          </div>
+          <button
+            type="submit"
+            class="btn-primary sm:col-span-2 w-full justify-center flex items-center mt-2"
+          >
+            Create account
+          </button>
+        </form>
+        <p class="text-sm text-slate-500 mt-6 text-center">
+          Already have an account?
+          <a href="login.html" class="text-emerald-700 font-semibold"
+            >Sign in</a
+          >
+        </p>
       </div>
-      <div class="sm:col-span-1">
-        <label class="text-sm font-medium">Store name</label>
-        <input name="store" class="input mt-1" placeholder="Adaeze Beauty" required>
-      </div>
-      <div class="sm:col-span-1">
-        <label class="text-sm font-medium">Phone (WhatsApp)</label>
-        <input name="phone" class="input mt-1" placeholder="08012345678" required>
-      </div>
-      <div class="sm:col-span-1">
-        <label class="text-sm font-medium">Email</label>
-        <input name="email" type="email" class="input mt-1" placeholder="you@example.com" required>
-      </div>
-      <div class="sm:col-span-1">
-        <label class="text-sm font-medium">Password</label>
-        <input name="password" type="password" class="input mt-1" required>
-      </div>
-      <div class="sm:col-span-1">
-        <label class="text-sm font-medium">Confirm password</label>
-        <input name="confirm" type="password" class="input mt-1" required>
-      </div>
-      <button type="submit" class="btn-primary sm:col-span-2 w-full justify-center flex items-center mt-2">Create account</button>
-    </form>
-    <p class="text-sm text-slate-500 mt-6 text-center">Already have an account? <a href="login.html" class="text-emerald-700 font-semibold">Sign in</a></p>
-  </div>
-</main>
-<script src="js/api.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/auth.js"></script>
-<script>UI.mountNavbar(); Auth.bindRegister("regForm");</script>
-</body>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      UI.mountNavbar();
+      Auth.bindRegister("regForm");
+    </script>
+  </body>
 </html>

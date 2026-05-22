@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Contact — Naijamart</title>
+<meta name="description" content="Get in touch with the Naijamart team. We respond to every message within one business day."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-white text-slate-900">
+<div id="navbar"></div>
+
+<section class="hero-grad">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-12 text-center">
+    <span class="badge badge-success mb-5">We'd love to hear from you</span>
+    <h1 class="font-display text-4xl sm:text-5xl font-extrabold">Talk to us.</h1>
+    <p class="mt-4 text-lg text-slate-600 max-w-xl mx-auto">Sales, support, partnerships or just to say hello — we read every message.</p>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-3 gap-8">
+  <div class="space-y-5 md:col-span-1">
+    <div class="card p-5"><p class="text-xs text-slate-500">Email</p><p class="font-semibold mt-1">hello@naijamart.ng</p></div>
+    <div class="card p-5"><p class="text-xs text-slate-500">WhatsApp</p><a href="https://wa.me/2348000000000" class="font-semibold mt-1 text-emerald-700 block">+234 800 000 0000</a></div>
+    <div class="card p-5"><p class="text-xs text-slate-500">Office</p><p class="font-semibold mt-1">12 Admiralty Way,<br/>Lekki Phase 1, Lagos</p></div>
+  </div>
+
+  <form id="contactForm" class="card p-6 md:col-span-2 space-y-4">
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div><label class="text-sm font-medium">Full name</label><input name="name" required class="input mt-1" placeholder="Chiamaka Okafor"/></div>
+      <div><label class="text-sm font-medium">Email</label><input name="email" type="email" required class="input mt-1" placeholder="you@email.com"/></div>
+    </div>
+    <div><label class="text-sm font-medium">Subject</label>
+      <select name="subject" class="input mt-1">
+        <option>General inquiry</option><option>Sales</option><option>Partnership</option><option>Support</option>
+      </select>
+    </div>
+    <div><label class="text-sm font-medium">Message</label><textarea name="message" rows="5" required class="input mt-1" placeholder="How can we help?"></textarea></div>
+    <button class="btn-primary w-full sm:w-auto">Send message</button>
+  </form>
+</section>
+
+<div id="footer"></div>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/contact.js"></script>
+<script>
+  UI.mountNavbar("contact");
+  document.getElementById("footer").innerHTML = UI.footer();
+  Contact.bindForm(document.getElementById("contactForm"));
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>About — Naijamart</title>
+<meta name="description" content="Naijamart is on a mission to power the next generation of Nigerian commerce — from local hustle to global brand."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-white text-slate-900">
+<div id="navbar"></div>
+
+<section class="hero-grad">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-16 pb-16 text-center">
+    <span class="badge badge-success mb-5">Our story</span>
+    <h1 class="font-display text-4xl sm:text-5xl font-extrabold leading-tight">Powering the next wave of <span class="text-emerald-600">Nigerian commerce.</span></h1>
+    <p class="mt-5 text-lg text-slate-600 max-w-2xl mx-auto">We started Naijamart with one belief: every Nigerian seller — from market traders in Onitsha to indie founders in Yaba — deserves software as good as the world's best.</p>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+  <img class="rounded-3xl w-full" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900" alt="Team"/>
+  <div>
+    <h2 class="font-display text-3xl font-bold">Our mission</h2>
+    <p class="text-slate-600 mt-3">To remove every barrier between a Nigerian hustler and a profitable online business. Beautiful tools, fair pricing, no gatekeeping.</p>
+    <div class="grid grid-cols-3 gap-4 mt-8">
+      <div class="card p-4 text-center"><p class="font-display text-2xl font-bold text-emerald-700">12k+</p><p class="text-xs text-slate-500 mt-1">Active sellers</p></div>
+      <div class="card p-4 text-center"><p class="font-display text-2xl font-bold text-emerald-700">36</p><p class="text-xs text-slate-500 mt-1">States covered</p></div>
+      <div class="card p-4 text-center"><p class="font-display text-2xl font-bold text-emerald-700">₦4B+</p><p class="text-xs text-slate-500 mt-1">Processed</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-50 py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <h2 class="font-display text-3xl font-bold text-center">Values that shape us</h2>
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+      <div class="card p-6"><div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">🇳🇬</div><h3 class="font-semibold mt-4">Built for here</h3><p class="text-sm text-slate-500 mt-2">Every feature is tested with real Nigerian sellers. We sweat the local details.</p></div>
+      <div class="card p-6"><div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">⚡</div><h3 class="font-semibold mt-4">Speed is respect</h3><p class="text-sm text-slate-500 mt-2">Fast pages, fast support, fast payouts. Your time is the product.</p></div>
+      <div class="card p-6"><div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">🤝</div><h3 class="font-semibold mt-4">Win together</h3><p class="text-sm text-slate-500 mt-2">If our sellers don't grow, we don't grow. Simple as that.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-4 sm:px-6 py-20">
+  <h2 class="font-display text-3xl font-bold text-center">Meet the team</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+    <div class="text-center"><img src="https://i.pravatar.cc/200?img=12" class="w-24 h-24 rounded-full mx-auto"/><p class="font-semibold mt-3">Adaeze N.</p><p class="text-xs text-slate-500">CEO & Co-founder</p></div>
+    <div class="text-center"><img src="https://i.pravatar.cc/200?img=33" class="w-24 h-24 rounded-full mx-auto"/><p class="font-semibold mt-3">Tunde A.</p><p class="text-xs text-slate-500">CTO</p></div>
+    <div class="text-center"><img src="https://i.pravatar.cc/200?img=47" class="w-24 h-24 rounded-full mx-auto"/><p class="font-semibold mt-3">Funmi O.</p><p class="text-xs text-slate-500">Head of Design</p></div>
+    <div class="text-center"><img src="https://i.pravatar.cc/200?img=58" class="w-24 h-24 rounded-full mx-auto"/><p class="font-semibold mt-3">Ibrahim K.</p><p class="text-xs text-slate-500">Head of Growth</p></div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script>UI.mountNavbar("about"); document.getElementById("footer").innerHTML = UI.footer();</script>
+</body>
+</html>

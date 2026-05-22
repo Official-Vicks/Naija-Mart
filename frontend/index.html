@@ -1,136 +1,257 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Naijamart — Modern marketplace for Nigerian sellers</title>
-<meta name="description" content="Naijamart helps Nigerian sellers launch beautiful online stores, manage inventory, and sell directly via WhatsApp."/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body class="bg-white text-slate-900">
-<div id="navbar"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Naijamart — Modern marketplace for Nigerian sellers</title>
+    <meta
+      name="description"
+      content="Naijamart helps Nigerian sellers launch beautiful online stores, manage inventory, and sell directly via WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/icons/logo_icon.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-white text-slate-900">
+    <div id="navbar"></div>
 
-<!-- Hero -->
-<section class="hero-grad">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-20 grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <span class="badge badge-success mb-5">🇳🇬 Built for Nigerian commerce</span>
-      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
-        Sell smarter. <span class="text-emerald-600">Grow faster.</span>
-      </h1>
-      <p class="mt-5 text-lg text-slate-600 max-w-xl">The modern marketplace SaaS that turns your hustle into a real online business — from Lagos to Kano, in minutes.</p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="register.html" class="btn-primary">Start selling free</a>
-        <a href="product.html" class="btn-ghost">Browse marketplace →</a>
-      </div>
-      <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
-        <div class="flex -space-x-2">
-          <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/80?img=12">
-          <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/80?img=32">
-          <img class="w-8 h-8 rounded-full border-2 border-white" src="https://i.pravatar.cc/80?img=47">
+    <!-- Hero -->
+    <section class="hero-grad">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-20 grid lg:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <span class="badge badge-success mb-5"
+            >🇳🇬 Built for Nigerian commerce</span
+          >
+          <h1
+            class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]"
+          >
+            Sell smarter. <span class="text-emerald-600">Grow faster.</span>
+          </h1>
+          <p class="mt-5 text-lg text-slate-600 max-w-xl">
+            The modern marketplace SaaS that turns your hustle into a real
+            online business — from Lagos to Kano, in minutes.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="register.html" class="btn-primary">Start selling free</a>
+            <a href="product.html" class="btn-ghost">Browse marketplace →</a>
+          </div>
+          <div class="mt-8 flex items-center gap-6 text-sm text-slate-500">
+            <div class="flex -space-x-2">
+              <img
+                class="w-8 h-8 rounded-full border-2 border-white"
+                src="https://i.pravatar.cc/80?img=12"
+              />
+              <img
+                class="w-8 h-8 rounded-full border-2 border-white"
+                src="https://i.pravatar.cc/80?img=32"
+              />
+              <img
+                class="w-8 h-8 rounded-full border-2 border-white"
+                src="https://i.pravatar.cc/80?img=47"
+              />
+            </div>
+            <span
+              ><b class="text-slate-900">12,000+</b> sellers across
+              Nigeria</span
+            >
+          </div>
         </div>
-        <span><b class="text-slate-900">12,000+</b> sellers across Nigeria</span>
+        <div class="relative">
+          <div class="card p-3 rotate-1">
+            <img
+              class="rounded-xl w-full"
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900"
+              alt="Dashboard preview"
+            />
+          </div>
+          <div
+            class="card p-4 absolute -bottom-6 -left-6 hidden sm:block max-w-xs"
+          >
+            <p class="text-xs text-slate-500">Today's revenue</p>
+            <p class="font-display text-2xl font-bold">₦248,500</p>
+            <p class="text-xs text-emerald-600 mt-1">▲ 18% vs yesterday</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="relative">
-      <div class="card p-3 rotate-1">
-        <img class="rounded-xl w-full" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900" alt="Dashboard preview"/>
+    </section>
+
+    <!-- Featured -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <h2 class="font-display text-3xl font-bold">Featured products</h2>
+          <p class="text-slate-500 mt-1">
+            Hand-picked from sellers across Nigeria.
+          </p>
+        </div>
+        <a
+          href="product.html"
+          class="hidden sm:inline text-emerald-700 font-semibold hover:underline"
+          >View all →</a
+        >
       </div>
-      <div class="card p-4 absolute -bottom-6 -left-6 hidden sm:block max-w-xs">
-        <p class="text-xs text-slate-500">Today's revenue</p>
-        <p class="font-display text-2xl font-bold">₦248,500</p>
-        <p class="text-xs text-emerald-600 mt-1">▲ 18% vs yesterday</p>
+      <div
+        id="featuredGrid"
+        class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+      ></div>
+    </section>
+
+    <!-- Sellers -->
+    <section id="sellers" class="bg-slate-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl font-bold">
+            Everything you need to scale your store
+          </h2>
+          <p class="text-slate-600 mt-2">
+            From inventory to checkout via WhatsApp — Naijamart gives you the
+            tools the big brands use.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <div class="card p-6">
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl"
+            >
+              📦
+            </div>
+            <h3 class="font-semibold mt-4">Inventory in real-time</h3>
+            <p class="text-sm text-slate-500 mt-2">
+              Add products, track stock, and get low-stock alerts before you run
+              out.
+            </p>
+          </div>
+          <div class="card p-6">
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl"
+            >
+              💬
+            </div>
+            <h3 class="font-semibold mt-4">WhatsApp checkout</h3>
+            <p class="text-sm text-slate-500 mt-2">
+              Convert chats into sales. Buyers reach you instantly with one
+              click.
+            </p>
+          </div>
+          <div class="card p-6">
+            <div
+              class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl"
+            >
+              📈
+            </div>
+            <h3 class="font-semibold mt-4">Beautiful dashboard</h3>
+            <p class="text-sm text-slate-500 mt-2">
+              Track revenue, top products and customer behavior at a glance.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Featured -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-  <div class="flex items-end justify-between mb-8">
-    <div>
-      <h2 class="font-display text-3xl font-bold">Featured products</h2>
-      <p class="text-slate-500 mt-1">Hand-picked from sellers across Nigeria.</p>
-    </div>
-    <a href="product.html" class="hidden sm:inline text-emerald-700 font-semibold hover:underline">View all →</a>
-  </div>
-  <div id="featuredGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
-</section>
-
-<!-- Sellers -->
-<section id="sellers" class="bg-slate-50 py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="max-w-2xl">
-      <h2 class="font-display text-3xl font-bold">Everything you need to scale your store</h2>
-      <p class="text-slate-600 mt-2">From inventory to checkout via WhatsApp — Naijamart gives you the tools the big brands use.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6 mt-10">
-      
-      <div class="card p-6">
-        <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">📦</div>
-        <h3 class="font-semibold mt-4">Inventory in real-time</h3>
-        <p class="text-sm text-slate-500 mt-2">Add products, track stock, and get low-stock alerts before you run out.</p>
+    <!-- Testimonials -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <h2 class="font-display text-3xl font-bold text-center">
+        Loved by sellers nationwide
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="card p-6">
+          <p class="text-slate-700">
+            "I sold out my first batch in 48 hours. The WhatsApp button is a
+            game changer."
+          </p>
+          <div class="mt-4 flex items-center gap-3">
+            <img
+              src="https://i.pravatar.cc/80?img=15"
+              class="w-10 h-10 rounded-full"
+            />
+            <div>
+              <p class="font-semibold text-sm">Chiamaka O.</p>
+              <p class="text-xs text-slate-500">Lagos Threads</p>
+            </div>
+          </div>
+        </div>
+        <div class="card p-6">
+          <p class="text-slate-700">
+            "Looks like Shopify but actually built for us. My customers love
+            it."
+          </p>
+          <div class="mt-4 flex items-center gap-3">
+            <img
+              src="https://i.pravatar.cc/80?img=33"
+              class="w-10 h-10 rounded-full"
+            />
+            <div>
+              <p class="font-semibold text-sm">Ibrahim A.</p>
+              <p class="text-xs text-slate-500">AbujaTech</p>
+            </div>
+          </div>
+        </div>
+        <div class="card p-6">
+          <p class="text-slate-700">
+            "The dashboard helped me see what's actually selling. Revenue up
+            3x."
+          </p>
+          <div class="mt-4 flex items-center gap-3">
+            <img
+              src="https://i.pravatar.cc/80?img=49"
+              class="w-10 h-10 rounded-full"
+            />
+            <div>
+              <p class="font-semibold text-sm">Funmi T.</p>
+              <p class="text-xs text-slate-500">PureGlow NG</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card p-6">
-        <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">💬</div>
-        <h3 class="font-semibold mt-4">WhatsApp checkout</h3>
-        <p class="text-sm text-slate-500 mt-2">Convert chats into sales. Buyers reach you instantly with one click.</p>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+      <div
+        class="rounded-3xl p-10 sm:p-14 text-center"
+        style="background: linear-gradient(135deg, #0f9d58, #0b7a44)"
+      >
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">
+          Your shop. Your hustle. Your future.
+        </h2>
+        <p class="text-emerald-50 mt-3 max-w-xl mx-auto">
+          Join thousands of Nigerian sellers building real businesses on
+          Naijamart.
+        </p>
+        <a
+          href="register.html"
+          class="inline-block mt-7 bg-white text-emerald-700 font-semibold px-6 py-3 rounded-xl hover:bg-emerald-50"
+          >Create your free store</a
+        >
       </div>
-      <div class="card p-6">
-        <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl">📈</div>
-        <h3 class="font-semibold mt-4">Beautiful dashboard</h3>
-        <p class="text-sm text-slate-500 mt-2">Track revenue, top products and customer behavior at a glance.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Testimonials -->
-<section id="testimonials" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-  <h2 class="font-display text-3xl font-bold text-center">Loved by sellers nationwide</h2>
-  <div class="grid md:grid-cols-3 gap-6 mt-10">
-    <div class="card p-6">
-      <p class="text-slate-700">"I sold out my first batch in 48 hours. The WhatsApp button is a game changer."</p>
-      <div class="mt-4 flex items-center gap-3"><img src="https://i.pravatar.cc/80?img=15" class="w-10 h-10 rounded-full"/><div><p class="font-semibold text-sm">Chiamaka O.</p><p class="text-xs text-slate-500">Lagos Threads</p></div></div>
-    </div>
-    <div class="card p-6">
-      <p class="text-slate-700">"Looks like Shopify but actually built for us. My customers love it."</p>
-      <div class="mt-4 flex items-center gap-3"><img src="https://i.pravatar.cc/80?img=33" class="w-10 h-10 rounded-full"/><div><p class="font-semibold text-sm">Ibrahim A.</p><p class="text-xs text-slate-500">AbujaTech</p></div></div>
-    </div>
-    <div class="card p-6">
-      <p class="text-slate-700">"The dashboard helped me see what's actually selling. Revenue up 3x."</p>
-      <div class="mt-4 flex items-center gap-3"><img src="https://i.pravatar.cc/80?img=49" class="w-10 h-10 rounded-full"/><div><p class="font-semibold text-sm">Funmi T.</p><p class="text-xs text-slate-500">PureGlow NG</p></div></div>
-    </div>
-  </div>
-</section>
+    <div id="footer"></div>
 
-<!-- CTA -->
-<section class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
-  <div class="rounded-3xl p-10 sm:p-14 text-center" style="background: linear-gradient(135deg, #0F9D58, #0b7a44);">
-    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">Your shop. Your hustle. Your future.</h2>
-    <p class="text-emerald-50 mt-3 max-w-xl mx-auto">Join thousands of Nigerian sellers building real businesses on Naijamart.</p>
-    <a href="register.html" class="inline-block mt-7 bg-white text-emerald-700 font-semibold px-6 py-3 rounded-xl hover:bg-emerald-50">Create your free store</a>
-  </div>
-</section>
-
-<div id="footer"></div>
-
-<script src="js/api.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/products.js"></script>
-<script>
-  UI.mountNavbar("home");
-  document.getElementById("footer").innerHTML = UI.footer();
-  (async () => {
-    const grid = document.getElementById("featuredGrid");
-    grid.innerHTML = Products.skeletons(4);
-    const list = await Products.fetchAll();
-    grid.innerHTML = list.slice(0, 4).map(Products.card).join("");
-  })();
-</script>
-</body>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+      UI.mountNavbar("home");
+      document.getElementById("footer").innerHTML = UI.footer();
+      (async () => {
+        const grid = document.getElementById("featuredGrid");
+        grid.innerHTML = Products.skeletons(4);
+        const list = await Products.fetchAll();
+        grid.innerHTML = list.slice(0, 4).map(Products.card).join("");
+      })();
+    </script>
+  </body>
 </html>

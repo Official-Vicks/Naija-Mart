@@ -1,152 +1,252 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Dashboard — Naijamart</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body class="bg-slate-50 min-h-screen">
-
-<!-- Mobile topbar -->
-<header class="lg:hidden sticky top-0 z-30 bg-white border-b border-slate-100 h-14 flex items-center justify-between px-4">
-  <button id="sideToggle" class="p-2 rounded-lg hover:bg-slate-100">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-  </button>
-  <a href="index.html" class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 text-white flex items-center justify-center font-bold">N</div><span class="font-display font-bold">Naijamart</span></a>
-  <div class="w-8"></div>
-</header>
-
-<div class="flex">
-  <!-- Sidebar -->
-  <div id="sideOverlay" class="fixed inset-0 bg-black/40 z-30 lg:hidden hidden"></div>
-  <aside id="sidebar" class="fixed lg:sticky top-0 z-40 w-64 h-screen bg-white border-r border-slate-100 p-5 -translate-x-full lg:translate-x-0 transition-transform">
-    <a href="index.html" class="flex items-center gap-2 mb-8"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-white flex items-center justify-center font-bold">N</div><span class="font-display text-lg font-bold">Naijamart</span></a>
-
-    <nav class="space-y-1 text-sm">
-      <a href="#" data-view="overview" class="sidebar-link active">📊 Overview</a>
-      <a href="#" data-view="products" class="sidebar-link">📦 Products</a>
-      <a href="#" data-view="inventory" class="sidebar-link">📈 Inventory</a>
-      <a href="#" data-view="profile" class="sidebar-link">👤 Profile</a>
-      <a href="product.html" class="sidebar-link">🛍️ View store</a>
-    </nav>
-
-    <div class="absolute bottom-5 left-5 right-5">
-      <div class="card p-3 flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold" id="userInitial">S</div>
-        <div class="flex-1 min-w-0">
-          <p class="text-sm font-semibold truncate" id="userName">Seller</p>
-          <button id="logoutBtn" class="text-xs text-slate-500 hover:text-red-600">Sign out</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard — Naijamart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/icons/logo_icon.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-slate-50 min-h-screen">
+    <!-- Mobile topbar -->
+    <header
+      class="lg:hidden sticky top-0 z-30 bg-white border-b border-slate-100 h-14 flex items-center justify-between px-4"
+    >
+      <button id="sideToggle" class="p-2 rounded-lg hover:bg-slate-100">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+      <a href="index.html" class="flex items-center gap-2"
+        ><div
+          class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 text-white flex items-center justify-center font-bold"
+        >
+          N
         </div>
-      </div>
+        <span class="font-display font-bold">Naijamart</span></a
+      >
+      <div class="w-8"></div>
+    </header>
+
+    <div class="flex">
+      <!-- Sidebar -->
+      <div
+        id="sideOverlay"
+        class="fixed inset-0 bg-black/40 z-30 lg:hidden hidden"
+      ></div>
+      <aside
+        id="sidebar"
+        class="fixed lg:sticky top-0 z-40 w-64 h-screen bg-white border-r border-slate-100 p-5 -translate-x-full lg:translate-x-0 transition-transform"
+      >
+        <a href="index.html" class="flex items-center gap-2 mb-8"
+          ><div
+            class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-white flex items-center justify-center font-bold"
+          >
+            N
+          </div>
+          <span class="font-display text-lg font-bold">Naijamart</span></a
+        >
+
+        <nav class="space-y-1 text-sm">
+          <a href="#" data-view="overview" class="sidebar-link active"
+            >📊 Overview</a
+          >
+          <a href="#" data-view="products" class="sidebar-link">📦 Products</a>
+          <a href="#" data-view="inventory" class="sidebar-link"
+            >📈 Inventory</a
+          >
+          <a href="#" data-view="profile" class="sidebar-link">👤 Profile</a>
+          <a href="product.html" class="sidebar-link">🛍️ View store</a>
+        </nav>
+
+        <div class="absolute bottom-5 left-5 right-5">
+          <div class="card p-3 flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold"
+              id="userInitial"
+            >
+              S
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-semibold truncate" id="userName">Seller</p>
+              <button
+                id="logoutBtn"
+                class="text-xs text-slate-500 hover:text-red-600"
+              >
+                Sign out
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="flex-1 min-w-0 p-4 sm:p-6 lg:p-10">
+        <!-- Overview -->
+        <section data-pane="overview">
+          <div
+            class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6"
+          >
+            <div>
+              <h1 class="font-display text-2xl sm:text-3xl font-bold">
+                Welcome back 👋
+              </h1>
+              <p class="text-slate-500 mt-1">
+                Here's what's happening with your store today.
+              </p>
+            </div>
+            <button id="openCreate" class="btn-primary">+ Add product</button>
+          </div>
+          <div
+            id="statsGrid"
+            class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
+          ></div>
+
+          <div class="card p-6 mt-8">
+            <h3 class="font-display text-lg font-bold">Recent products</h3>
+            <p class="text-sm text-slate-500">Your latest listings.</p>
+            <div id="dashProducts" class="grid sm:grid-cols-2 gap-3 mt-4"></div>
+          </div>
+        </section>
+
+        <!-- Products -->
+        <section data-pane="products" class="hidden">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h1 class="font-display text-2xl font-bold">Products</h1>
+              <p class="text-slate-500">Manage your catalog.</p>
+            </div>
+            <button id="openCreate2" class="btn-primary">+ Add product</button>
+          </div>
+          <div id="dashProducts2" class="grid sm:grid-cols-2 gap-3"></div>
+        </section>
+
+        <!-- Inventory -->
+        <section data-pane="inventory" class="hidden">
+          <h1 class="font-display text-2xl font-bold mb-2">Inventory</h1>
+          <p class="text-slate-500 mb-6">
+            Track stock health across your catalog.
+          </p>
+          <div id="invTable" class="card overflow-hidden"></div>
+        </section>
+
+        <!-- Profile -->
+        <section data-pane="profile" class="hidden max-w-2xl">
+          <h1 class="font-display text-2xl font-bold mb-2">Profile settings</h1>
+          <p class="text-slate-500 mb-6">Update your store info.</p>
+          <form id="profileForm" class="card p-6 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-medium">Full name</label
+                ><input name="name" class="input mt-1" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Store name</label
+                ><input name="store_name" class="input mt-1" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Phone</label
+                ><input name="phone" class="input mt-1" />
+              </div>
+              <div>
+                <label class="text-sm font-medium">Email</label
+                ><input name="email" type="email" class="input mt-1" />
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <button class="btn-primary">Save changes</button>
+            </div>
+          </form>
+        </section>
+      </main>
     </div>
-  </aside>
 
-  <main class="flex-1 min-w-0 p-4 sm:p-6 lg:p-10">
-    <!-- Overview -->
-    <section data-pane="overview">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
-        <div>
-          <h1 class="font-display text-2xl sm:text-3xl font-bold">Welcome back 👋</h1>
-          <p class="text-slate-500 mt-1">Here's what's happening with your store today.</p>
-        </div>
-        <button id="openCreate" class="btn-primary">+ Add product</button>
-      </div>
-      <div id="statsGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script>
+      Dashboard.init().then(() => {
+        // duplicate product list into Products tab
+        const src = document.getElementById("dashProducts");
+        const dest = document.getElementById("dashProducts2");
+        if (src && dest) dest.innerHTML = src.innerHTML;
 
-      <div class="card p-6 mt-8">
-        <h3 class="font-display text-lg font-bold">Recent products</h3>
-        <p class="text-sm text-slate-500">Your latest listings.</p>
-        <div id="dashProducts" class="grid sm:grid-cols-2 gap-3 mt-4"></div>
-      </div>
-    </section>
-
-    <!-- Products -->
-    <section data-pane="products" class="hidden">
-      <div class="flex items-center justify-between mb-6">
-        <div><h1 class="font-display text-2xl font-bold">Products</h1><p class="text-slate-500">Manage your catalog.</p></div>
-        <button id="openCreate2" class="btn-primary">+ Add product</button>
-      </div>
-      <div id="dashProducts2" class="grid sm:grid-cols-2 gap-3"></div>
-    </section>
-
-    <!-- Inventory -->
-    <section data-pane="inventory" class="hidden">
-      <h1 class="font-display text-2xl font-bold mb-2">Inventory</h1>
-      <p class="text-slate-500 mb-6">Track stock health across your catalog.</p>
-      <div id="invTable" class="card overflow-hidden"></div>
-    </section>
-
-    <!-- Profile -->
-    <section data-pane="profile" class="hidden max-w-2xl">
-      <h1 class="font-display text-2xl font-bold mb-2">Profile settings</h1>
-      <p class="text-slate-500 mb-6">Update your store info.</p>
-      <form id="profileForm" class="card p-6 space-y-4">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div><label class="text-sm font-medium">Full name</label><input name="name" class="input mt-1"></div>
-          <div><label class="text-sm font-medium">Store name</label><input name="store_name" class="input mt-1"></div>
-          <div><label class="text-sm font-medium">Phone</label><input name="phone" class="input mt-1"></div>
-          <div><label class="text-sm font-medium">Email</label><input name="email" type="email" class="input mt-1"></div>
-        </div>
-        <div class="flex justify-end"><button class="btn-primary">Save changes</button></div>
-      </form>
-    </section>
-  </main>
-</div>
-
-<script src="js/api.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/products.js"></script>
-<script src="js/auth.js"></script>
-<script src="js/dashboard.js"></script>
-<script>
-Dashboard.init().then(() => {
-  // duplicate product list into Products tab
-  const src = document.getElementById("dashProducts");
-  const dest = document.getElementById("dashProducts2");
-  if (src && dest) dest.innerHTML = src.innerHTML;
-
-  // inventory table
-  const inv = document.getElementById("invTable");
-  if (inv) {
-    inv.innerHTML = `
+        // inventory table
+        const inv = document.getElementById("invTable");
+        if (inv) {
+          inv.innerHTML = `
       <table class="w-full text-sm">
         <thead class="bg-slate-50 text-slate-500 text-xs uppercase">
           <tr><th class="text-left py-3 px-4">Product</th><th class="text-left py-3 px-4">Category</th><th class="text-right py-3 px-4">Price</th><th class="text-right py-3 px-4">Stock</th><th class="text-left py-3 px-4">Status</th></tr>
         </thead>
         <tbody>
-          ${Dashboard.state.products.map(p => `
+          ${Dashboard.state.products
+            .map(
+              (p) => `
             <tr class="border-t border-slate-100">
-              <td class="py-3 px-4 flex items-center gap-3"><img src="${p.images?.[0]||'https://placehold.co/60'}" class="w-10 h-10 rounded-lg object-cover bg-slate-100"><span class="font-medium">${p.name}</span></td>
+              <td class="py-3 px-4 flex items-center gap-3"><img src="${
+                p.images?.[0] || "https://placehold.co/60"
+              }" class="w-10 h-10 rounded-lg object-cover bg-slate-100"><span class="font-medium">${
+                p.name
+              }</span></td>
               <td class="py-3 px-4">${p.category}</td>
-              <td class="py-3 px-4 text-right font-semibold">${UI.formatNaira(p.price)}</td>
+              <td class="py-3 px-4 text-right font-semibold">${UI.formatNaira(
+                p.price
+              )}</td>
               <td class="py-3 px-4 text-right">${p.stock}</td>
-              <td class="py-3 px-4"><span class="badge ${p.stock>0?'badge-success':'badge-danger'}">${p.stock>0?'Active':'Out of stock'}</span></td>
-            </tr>`).join("")}
+              <td class="py-3 px-4"><span class="badge ${
+                p.stock > 0 ? "badge-success" : "badge-danger"
+              }">${p.stock > 0 ? "Active" : "Out of stock"}</span></td>
+            </tr>`
+            )
+            .join("")}
         </tbody>
       </table>`;
-  }
+        }
 
-  // profile prefill
-  const u = API.getUser() || {};
-  const pf = document.getElementById("profileForm");
-  if (pf) {
-    pf.name.value = u.name || ""; pf.store_name.value = u.store_name || "";
-    pf.phone.value = u.phone || ""; pf.email.value = u.email || "";
-    pf.addEventListener("submit", e => {
-      e.preventDefault();
-      const fd = new FormData(pf); const obj = {}; fd.forEach((v,k)=>obj[k]=v);
-      API.setUser({ ...u, ...obj });
-      UI.toast("Profile saved", "success");
-    });
-  }
+        // profile prefill
+        const u = API.getUser() || {};
+        const pf = document.getElementById("profileForm");
+        if (pf) {
+          pf.name.value = u.name || "";
+          pf.store_name.value = u.store_name || "";
+          pf.phone.value = u.phone || "";
+          pf.email.value = u.email || "";
+          pf.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const fd = new FormData(pf);
+            const obj = {};
+            fd.forEach((v, k) => (obj[k] = v));
+            API.setUser({ ...u, ...obj });
+            UI.toast("Profile saved", "success");
+          });
+        }
 
-  const initial = (u.name || u.store_name || u.email || "S")[0].toUpperCase();
-  document.getElementById("userInitial").textContent = initial;
-});
-</script>
-</body>
+        const initial = (u.name ||
+          u.store_name ||
+          u.email ||
+          "S")[0].toUpperCase();
+        document.getElementById("userInitial").textContent = initial;
+      });
+    </script>
+  </body>
 </html>
