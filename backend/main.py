@@ -22,5 +22,10 @@ try:
 except Exception as e:
     print("DB Error:", e)
 
+@app.get("/")
+def home():
+    return {"message": "NaijaMart API is live"}
+
+
 app.include_router(auth.router)
 app.include_router(products.router)
