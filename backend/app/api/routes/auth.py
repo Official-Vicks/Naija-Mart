@@ -34,9 +34,16 @@ def login(
 ):
     user = db.query(User).filter(User.email == form_data.username).first()
 
-    if not user or not verify_password(form_data.password, user.password):
+    if not user:
         raise HTTPException(status_code=400, detail="Invalid credentials")
 
+    is_valid = verify_password(form_data.password, user.password)
+
+    if not is_valid:
+        raise HTTPException(status_code=400, detail="Invalid credentials")
+
+    print(form_data.password)
+    print(len(form_data.password))
     token = create_access_token({"sub": user.email})
 
     return {
