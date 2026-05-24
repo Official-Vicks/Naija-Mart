@@ -42,8 +42,6 @@ def login(
     if not is_valid:
         raise HTTPException(status_code=400, detail="Invalid credentials")
 
-    print(form_data.password)
-    print(len(form_data.password))
     token = create_access_token({"sub": user.email})
 
     return {
