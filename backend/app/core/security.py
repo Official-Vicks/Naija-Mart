@@ -12,10 +12,6 @@ def hash_password(password: str):
     return pwd_context.hash(password)
 
 def verify_password(plain, hashed):
-    print("PLAIN:", plain)
-    print("PLAIN LEN:", len(plain.encode("utf-8")))
-    print("HASH:", hashed)
-
     if len(plain.encode("utf-8")) > 72:
         raise ValueError("Password too long")
 
